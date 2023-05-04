@@ -1,3 +1,8 @@
+import numpy
+import scipy.special
+import matplotlib.pyplot
+
+
 class NeuralNetwork:
 
     def __init__(self):
@@ -10,8 +15,7 @@ class NeuralNetwork:
         print('I ask..')
 
 
-
-
-
 if __name__ == '__main__':
     neuralNetwork = NeuralNetwork()
+    neuralNetwork.train()
+    neuralNetwork.query()
