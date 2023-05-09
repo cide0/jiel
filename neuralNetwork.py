@@ -11,7 +11,7 @@ class NeuralNetwork:
         self.oNodes = outputNodes
         self.lRate = learningRate
         self.wih = (numpy.random.rand(self.hNodes, self.iNodes) - 0.5)
-        self.woh = (numpy.random.rand(self.oNodes, self.hNodes) - 0.5)
+        self.who = (numpy.random.rand(self.oNodes, self.hNodes) - 0.5)
 
     def train(self):
         print('I am training')
