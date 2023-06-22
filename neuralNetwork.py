@@ -20,8 +20,8 @@ class NeuralNetwork:
         self.activation_function = lambda x: scipy.special.expit(x)
 
     def train(self, inputs_list, targets_list):
-        print("I startet training ...")
-        # convert inputs list to 2d array
+        #print("I startet training ...")
+        # convert inputs list to 2d arrayx
         inputs = numpy.array(inputs_list, ndmin=2).T
         targets = numpy.array(targets_list, ndmin=2).T
 
@@ -72,9 +72,9 @@ class NeuralNetwork:
 
 if __name__ == '__main__':
     inputNodes = 784
-    hiddenNodes = 100
+    hiddenNodes = 300
     outputNodes = 10
-    learningRate = 0.3
+    learningRate = 0.1
     neuralNetwork = NeuralNetwork(inputNodes, hiddenNodes, outputNodes, learningRate)
 
     training_data_file = open("mnist_dataset/mnist_train.csv", "r")
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     training_data_file.close()
 
     # epochs is the number of times the training data set is used for training
-    epochs = 2
+    epochs = 5
 
     for e in range(epochs):
         # go through all records in the training data set
